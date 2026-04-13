@@ -37,21 +37,21 @@ export default function AboutPage() {
   return (
     <>
       <SiteHeader />
-      <main id="main-content" className="pt-28">
+      <main id="main-content" className="pt-8">
         <section className="luxury-shell py-16 md:py-20">
-          <div className="grid gap-10 lg:grid-cols-[1fr_0.95fr] lg:items-end">
-            <div>
+          <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+            <div className="max-w-xl">
               <p className="luxury-eyebrow text-xs font-medium">Heritage</p>
               <h1 className="luxury-title mt-5 text-5xl md:text-6xl">
                 A Jawhar built on patience, proportion, and light.
               </h1>
               <p className="luxury-copy mt-6 max-w-2xl text-base md:text-lg">
                 Since 1892, Jawhar has pursued a restrained view of luxury:
-                stones chosen for depth, settings refined by hand, and pieces designed
-                to gather meaning over time.
+                stones chosen for depth, settings refined by hand, and pieces
+                designed to gather meaning over time.
               </p>
             </div>
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
+            <div className="relative w-full aspect-square md:aspect-[4/5] lg:max-h-[560px] overflow-hidden rounded-[2rem]">
               <Image
                 src="https://images.unsplash.com/photo-1567425601800-c084c6cd374e?auto=format&fit=crop&w=1400&q=80"
                 alt="Jawhar atelier"
