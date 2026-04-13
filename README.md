@@ -15,6 +15,8 @@ Jawhar ships with a complete luxury e-commerce frontend experience:
 - Contact & FAQ pages
 - Journal pages
 - Checkout & Account UI
+- Gifts
+- Career Guide
 
 The design language focuses on an elegant, editorial aesthetic with high-contrast neutrals, subtle gold accents, sophisticated scroll-triggered reveal animations, and a premium "modern heirlooms" brand tone.
 

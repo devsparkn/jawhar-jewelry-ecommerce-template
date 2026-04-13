@@ -116,7 +116,7 @@ export function StorefrontSidebar() {
         onClick={closeDrawer}
       />
       <aside
-        className={`fixed right-0 top-0 z-70 flex h-full w-full max-w-xl flex-col border-l border-(--line) bg-(--surface) shadow-2xl transition-transform duration-380 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        className={`fixed inset-y-0 right-0 z-70 flex h-[100dvh] max-h-[100dvh] w-full max-w-xl flex-col overflow-hidden border-l border-(--line) bg-(--surface) shadow-2xl transition-transform duration-380 ease-[cubic-bezier(0.16,1,0.3,1)] ${
           activeDrawer ? "translate-x-0" : "translate-x-full"
         }`}
         aria-hidden={activeDrawer ? "false" : "true"}
@@ -152,7 +152,7 @@ export function StorefrontSidebar() {
           </button>
         </div>
 
-        <div className="flex-1 overflow-y-auto px-6 py-6">
+        <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-6 py-6">
           {activeDrawer === "cart" ? (
             cartProducts.length > 0 ? (
               <div className="space-y-5">

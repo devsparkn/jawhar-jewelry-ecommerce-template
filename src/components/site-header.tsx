@@ -188,11 +188,11 @@ export function SiteHeader({ dark = false }: SiteHeaderProps) {
         role="dialog"
         aria-modal="true"
         aria-label="Navigation menu"
-        className={`fixed right-0 top-0 z-100 flex h-full w-full max-w-sm flex-col bg-(--surface-dark) text-white lg:hidden transition-transform duration-380 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        className={`fixed inset-y-0 right-0 z-100 flex h-[100dvh] max-h-[100dvh] w-full max-w-sm flex-col overflow-hidden bg-(--surface-dark) text-white lg:hidden transition-transform duration-380 ease-[cubic-bezier(0.16,1,0.3,1)] ${
           mobileNavOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex items-center justify-between border-b border-white/10 px-7 py-6">
+        <div className="shrink-0 flex items-center justify-between border-b border-white/10 px-7 py-6 pt-[max(1.5rem,env(safe-area-inset-top))]">
           <BrandMark dark compact onClick={() => setMobileNavOpen(false)} />
           <button
             type="button"
@@ -218,7 +218,7 @@ export function SiteHeader({ dark = false }: SiteHeaderProps) {
         </div>
 
         <nav
-          className="flex flex-1 flex-col justify-center px-7"
+          className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-7 py-4"
           aria-label="Mobile primary"
         >
           <ul className="space-y-1">
@@ -281,7 +281,7 @@ export function SiteHeader({ dark = false }: SiteHeaderProps) {
 
         <div
           style={{ transitionDelay: mobileNavOpen ? "400ms" : "0ms" }}
-          className={`border-t border-white/10 px-7 py-6 transition-all duration-500 ${
+          className={`shrink-0 border-t border-white/10 px-7 py-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] transition-all duration-500 ${
             mobileNavOpen
               ? "translate-y-0 opacity-100"
               : "translate-y-4 opacity-0"
